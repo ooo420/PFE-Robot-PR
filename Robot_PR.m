@@ -108,16 +108,16 @@ fprintf('Z      = %.3f m\n', P_place(3));
 % temps | q1 | theta
 
 waypoints = [
-    0.0   0.370   0;
-    1.5   0.200   0;
-    2.5   0.200   0;
-    3.5   0.370   0;
-    4.5   0.370   deg2rad(45);
-    5.5   0.180   deg2rad(45);
-    5.7   0.178   deg2rad(45);
-    6.2   0.178   deg2rad(45);
-    6.7   0.370   deg2rad(45);
-    7.0   0.370   0
+    0.0   0.370   0;      %HOME
+    1.5   0.200   0;      %Descente
+    2.5   0.200   0;      %Prise LCD
+    3.5   0.370   0;      %Remontée
+    4.5   0.370   deg2rad(45);        %Rotation
+    5.5   0.180   deg2rad(45);        %Descente
+    5.7   0.178   deg2rad(45);        %collage
+    6.2   0.178   deg2rad(45);        %Maintien
+    6.7   0.370   deg2rad(45);        %Remontée
+    7.0   0.370   0                   %Retour HOME
 ];
 
 t_way = waypoints(:,1);

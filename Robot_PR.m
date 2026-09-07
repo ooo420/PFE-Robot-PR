@@ -108,36 +108,16 @@ fprintf('Z      = %.3f m\n', P_place(3));
 % temps | q1 | theta
 
 waypoints = [
-
-    % HOME
-    0.0     0.370     0;
-
-    % Descente vers LCD
-    1.5     0.200     0;
-
-    % Positionnement
-    2.5     0.200     0;
-
-    % Rotation vers LCD
-    3.5     0.370     0;
-
-    % Arrivee au-dessus du LCD
-    4.5     0.370     deg2rad(45);
-
-    % Descente
-    5.5     0.180     deg2rad(45);
-
-    % Prise LCD
-    5.7     0.178     deg2rad(45);
-
-    % Maintien ventouse
-    6.2     0.178     deg2rad(45);
-
-    % Remontee avec LCD
-    6.7     0.370     deg2rad(45);
-
-    % Rotation vers support
-    7.0     0.370     0
+    0.0   0.370   0;
+    1.5   0.200   0;
+    2.5   0.200   0;
+    3.5   0.370   0;
+    4.5   0.370   deg2rad(45);
+    5.5   0.180   deg2rad(45);
+    5.7   0.178   deg2rad(45);
+    6.2   0.178   deg2rad(45);
+    6.7   0.370   deg2rad(45);
+    7.0   0.370   0
 ];
 
 t_way = waypoints(:,1);

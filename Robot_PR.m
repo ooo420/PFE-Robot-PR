@@ -66,10 +66,10 @@ robot = SerialLink( ...
 q_home = [0.370 0];
 
 % POSITION DE PRISE DU LCD
-q_pick = [0.178 deg2rad(45)];
+q_pick = [0.200 0];
 
 % POSITION DE DEPOT
-q_place = [0.180 0];
+q_place = [0.178 deg2rad(45)];
 
 % Cinématique directe
 T_pick = robot.fkine(q_pick);
@@ -114,7 +114,7 @@ waypoints = [
     3.5   0.370   0;      %Remontée
     4.5   0.370   deg2rad(45);        %Rotation
     5.5   0.180   deg2rad(45);        %Descente
-    5.7   0.178   deg2rad(45);        %collage
+    5.7   0.178   deg2rad(45);        %Collage
     6.2   0.178   deg2rad(45);        %Maintien
     6.7   0.370   deg2rad(45);        %Remontée
     7.0   0.370   0                   %Retour HOME

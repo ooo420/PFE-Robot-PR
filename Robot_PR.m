@@ -272,7 +272,7 @@ ylabel('\tau [N.m]');
 title('Couple dynamique de l''axe rotatif');
 
 %% ========================================================================
-% 18. TRAJECTOIRES ARTICULAIRES
+% TRAJECTOIRES ARTICULAIRES
 % ========================================================================
 
 figure('Name','Trajectoires articulaires');
@@ -288,8 +288,20 @@ ylabel('q_1 [mm]');
 
 title('Position axe prismatique');
 
-yline(q1_min*1000,'--');
-yline(q1_max*1000,'--');
+hold on;
+
+% Limite basse
+plot([t(1) t(end)], ...
+     [q1_min*1000 q1_min*1000], ...
+     '--');
+
+% Limite haute
+plot([t(1) t(end)], ...
+     [q1_max*1000 q1_max*1000], ...
+     '--');
+
+hold off;
+
 
 subplot(2,1,2);
 
@@ -302,8 +314,15 @@ ylabel('\theta [deg]');
 
 title('Position axe rotatif');
 
-yline(-90,'--');
-yline(90,'--');
+hold on;
+
+% Limite -90°
+plot([t(1) t(end)],[-90 -90],'--');
+
+% Limite +90°
+plot([t(1) t(end)],[90 90],'--');
+
+hold off;
 
 %% ========================================================================
 % 19. VITESSES
